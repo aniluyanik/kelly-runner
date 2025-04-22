@@ -1,3 +1,5 @@
+/* GFF Fonts (Woff) */
+
 @font-face {
   font-family: 'GFF Latin';
   src: url('https://raw.githubusercontent.com/starexxx/Fonts/72f7f16f663c3cc428487db36daca4fdcd75f48b/GFF-Latin-Regular.woff') format('woff');
@@ -19,11 +21,15 @@
   font-style: normal;
 }
 
+/* Global Styles */
+
 body {
   margin: 0;
   overflow: hidden;
   background: skyblue;
   font-family: 'GFF Latin', Arial, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #gameContainer {
@@ -93,41 +99,45 @@ body {
   font-size: 24px;
   font-weight: bold;
   font-family: 'GFF Latin', sans-serif;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px #000;
 }
 
 #gameOver {
   display: none;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
   color: white;
   font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 0;
   text-align: center;
   z-index: 999;
   font-family: 'GFF Latin', sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 #restartButton {
-  font-size: 30px;
+  font-family: 'GFF Latin', sans-serif;
+  font-size: 15px;
   padding: 20px 40px;
-  background-color: green;
+  background-color: transparent;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
-  font-family: 'GFF Latin', sans-serif;
+  font-weight: normal;
   margin-top: 20px;
-  transition: background-color 0.3s;
+  transition: ;
 }
 
-#restartButton:hover {
-  background-color: darkgreen;
+#restartButton:active {
+  filter: brightness(85%);
 }
 
 #rotateWarning {
@@ -140,7 +150,7 @@ body {
   background-color: #000000e6;
   color: white;
   z-index: 9999;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   padding-top: 40vh;
   font-family: 'GFF Latin', sans-serif;
