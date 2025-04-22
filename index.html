@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kelly Runner</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
@@ -12,8 +12,8 @@
 </div>
   <div id="gameContainer" onclick="handleTouchJump()">
     <div id="ground"></div>
-    <img src="Kelly-GIF__ff.gif" id="kelly" class="paused" />
-    <img src="obstacle.png" id="obstacle" />
+    <img src="assets/Kelly-GIF__ff.gif" id="kelly" class="paused" />
+    <img src="assets/obstacle.png" id="obstacle" />
     <div id="score">Tap to Start</div>
     <div id="gameOver">
       <p>Game Over!</p>
@@ -21,8 +21,8 @@
       <button id="restartButton" onclick="restartGame()">Tap to anywhere to close</button>
     </div>
   </div>
-  <audio id="jumpSound" src="jump.mp3" preload="auto"></audio>
-  <audio id="gameoverSound" src="gameover.mp3" preload="auto"></audio>
-  <script src="script.js"></script>
+  <audio id="jumpSound" src="assets/jump.mp3" preload="auto"></audio>
+  <audio id="gameoverSound" src="assets/gameover.mp3" preload="auto"></audio>
+  <script src="src/script.js"></script>
 </body>
 </html>
