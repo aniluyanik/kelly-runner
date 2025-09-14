@@ -70,7 +70,7 @@ function checkCollision() {
 function startGame() {
   gameRunning = true;
   score = 0;
-  scoreDisplay.textContent = "Score: " + score;
+  scoreDisplay.textContent = "" + score;
   kelly.classList.remove("paused");
   obstacle.style.animationPlayState = "running";
   gameOverDisplay.style.display = "none";
@@ -85,7 +85,7 @@ function startScoring() {
   scoreInterval = setInterval(() => {
     if (gameRunning) {
       score++;
-      scoreDisplay.textContent = "Score: " + score;
+      scoreDisplay.textContent = "" + score;
     }
   }, 100);
 }
@@ -95,7 +95,7 @@ function gameOver() {
   obstacle.style.animationPlayState = "paused";
   clearInterval(scoreInterval);
   clearInterval(collisionInterval);
-  finalScore.textContent = `Your Score: ${score}`;
+  finalScore.textContent = `Score: ${score}`;
   gameOverDisplay.style.display = "block";
   gameoverSound.play();
 }
@@ -120,5 +120,4 @@ function checkOrientation() {
 
 window.addEventListener("load", checkOrientation);
 window.addEventListener("resize", checkOrientation);
-window.addEventListener("orientationchange", checkOrientation);
-
+window.addEventListener("orientationchange", checkOrientation);                        
